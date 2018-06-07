@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, filter, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { from,timer } from 'rxjs';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
-import '../../assets/ckplayer/ckplayer';
-
+// import { ckplayer } from '../../assets/ckplayer/ckplayer';
 @Component({
   selector: 'app-bigdata',
   templateUrl: './bigdata.component.html',
@@ -33,6 +32,8 @@ export class BigdataComponent implements OnInit {
   user: any;
 
   signal : string = 'show';
+  ckplayer: any;
+  player: any;
 
   ngOnInit() {
 
@@ -76,11 +77,10 @@ export class BigdataComponent implements OnInit {
         autoplay: false,//自动播放
         live: true,
         poster: 'material/poster.jpg',
-        video:'rtmp://39.104.76.50:89/md/02'//视频地址
-        // video:'rtmp://live.hkstv.hk.lxdns.com/live/hks'//视频地址
+        video:'rtmp://live.hkstv.hk.lxdns.com/live/hks'//视频地址
         // video:'rtsp://admin:12345@111.3.57.50:554/Streaming/Channels/101'
         // video:'http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8'//视频地址
     };
-    const player = new ckplayer(videoObject);
+    this.player = new ckplayer(videoObject);
   }
 }

@@ -110,7 +110,7 @@ function ckplayerConfig() {
 	};
 }
 !(function() {
-	var javascriptPath = '';
+	var javascriptPath = '/assets/ckplayer/';
 	! function() {
 		var scriptList = document.scripts,
 			thisPath = scriptList[scriptList.length - 1].src;
