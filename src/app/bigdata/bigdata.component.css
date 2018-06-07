@@ -1,0 +1,9 @@
+.content{
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+}
+button{
+  margin-top: 200px;
+}
