@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, filter, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { from,timer } from 'rxjs';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
-// import { ckplayer } from '../../assets/ckplayer/ckplayer';
+import '../../assets/ckplayer/ckplayer';
 @Component({
   selector: 'app-bigdata',
   templateUrl: './bigdata.component.html',
@@ -23,16 +23,18 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
     ]
 })
 export class BigdataComponent implements OnInit {
+  
   constructor(private http: HttpClient) { }
 
   apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   username: string = '';
+ 
 
   user: any;
 
   signal : string = 'show';
-  ckplayer: any;
+  // ckplayer: any;
   player: any;
 
   ngOnInit() {
@@ -76,7 +78,7 @@ export class BigdataComponent implements OnInit {
         variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
         autoplay: false,//自动播放
         live: true,
-        poster: 'material/poster.jpg',
+        // poster: 'material/poster.jpg',
         video:'rtmp://live.hkstv.hk.lxdns.com/live/hks'//视频地址
         // video:'rtsp://admin:12345@111.3.57.50:554/Streaming/Channels/101'
         // video:'http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8'//视频地址
